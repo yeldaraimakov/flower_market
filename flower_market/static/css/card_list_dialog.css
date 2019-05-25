@@ -1,0 +1,19 @@
+.productName {
+    display: inline;
+    font-size: 12px;
+}
+
+.productPrice {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.productQuantity {
+    font-size: 12px;
+    color: #999;
+    margin-top: 28px;
+    text-align: left;
+}

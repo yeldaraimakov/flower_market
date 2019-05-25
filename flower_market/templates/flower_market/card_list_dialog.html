@@ -1,0 +1,48 @@
+{% load static %}
+
+<div class="modal fade" id="modalCardList" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width:1250px;" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">ТОВАР ДОБАВЛЕН В КОРЗИНУ</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-2 container">
+                    <div class="row">
+                        <div class="col-8">
+                            <p class="float-left">
+                                <img class="picture" id="lastProductImage" width="100" height="100" alt="Рубиновое сияние"
+                                     data-was-processed="true">
+                            </p><br>
+                            <div class="productName" id="lastProductName"></div>
+                        </div>
+                        <div class="col-1 productQuantity" id="lastProductQuantity"></div>
+                        <div class="col-3 productPrice" id="lastProductPrice"></div>
+                    </div>
+                </div>
+
+                <hr><div id="cardListTitle"></div>
+
+                <div class="md-form mb-2 container" id="cardList">
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-right">
+                <button class="btn btn-borderless" id="cancel" type="button">Продолжить покупки</button>
+                <button class="btn btn-info" type="button" onclick="goToCard()">Перейти в корзину</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="{% static "/" %}css/card_list_dialog.css">
+
+<script>
+    function goToCard() {
+        window.location.href = '/card/';
+    }
+</script>

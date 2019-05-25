@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Цветы Алматы. Доставка цветов </title>
+</head>
+<body>
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static "/" %}css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="{% static "/" %}css/aibi.css">
+<link rel="stylesheet" type="text/css" href="{% static "/" %}css/card.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="{% static "/" %}js/jquery.min.js" type="text/javascript"></script>
+<script src="{% static "/" %}js/popper.min.js" type="text/javascript"></script>
+<script src="{% static "/" %}js/vendor.js" type="text/javascript"></script>
+<script src="{% static "/" %}js/order.js" type="text/javascript"></script>
+<script src="{% static "/" %}js/card.js" type="text/javascript"></script>
+
+<div id="messages">
+    {% include "flower_market/messages_and_errors.html" %}
+</div>
+
+<form class="form-horizontal" action='{% url 'ordering' %}' method="POST">
+    {% csrf_token %}
+<div class="container-fluid boss">
+    <div class="container1 ">
+        <div class="row">
+            <div class="col-12">
+                <div class="top-menu">
+
+                    <ul>
+                        <li class="top-menu"><img
+                                srcset="https://scontent-bru2-1.cdninstagram.com/vp/0da53b16b02ef3d059f52aa0e7deb5b1/5CFE40FF/t51.2885-19/s150x150/49933867_1422561357878433_1211070285143343104_n.jpg?_nc_ht=scontent-bru2-1.cdninstagram.com"
+                                id="logotype"></li>
+                        <li class="top-menu"><a href="{% url 'home' %}">Главная </a></li>
+                        <li class="top-menu"><a href="dostavka.html"> Доставка </a></li>
+                        <li class="top-menu"><a href="oplata.html"> Как оплатить </a></li>
+                        <li class="top-menu"> +7 7782216866</li>
+                        <li class="top-menu">
+                            <button class="button_1" data-toggle="modal" data-target="#modalOrderCall">ЗАКАЗАТЬ ЗВОНОК
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ordering">
+        <h5 class="card-titles">ОФОРМЛЕНИЕ ЗАКАЗА</h5>
+        <hr class="hr-line">
+
+        <div class="mb30">
+            <i class="fa fa-warning warning-icon"></i>
+            <span class="warning-text">Обратите внимание: для получения товаров почтой имя и фамилия должны совпадать с данными удостоверения личности</span>
+        </div>
+
+            <fieldset>
+                <div class="form-group row mb30">
+                    <label class="input-labels control-label col-sm-2" for="phone">Телефон</label>
+                    <div class="col-sm-4">
+                        <div class="input-group">
+                            <input class="form-control" type="number" id="phone" name="phone" placeholder="" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row mb30">
+                    <label class="input-labels control-label col-sm-2" for="firstname">Имя</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" id="firstname" name="firstname" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="form-group row mb30">
+                    <label class="input-labels control-label col-sm-2" for="lastname">Фамилия</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" id="lastname" name="lastname" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="form-group row mb30">
+                    <label class="input-labels control-label col-sm-2" for="delivery">Способ доставки</label>
+                    <div class="col-sm-4">
+                        <select class="form-control" name="delivery_type" onchange="deliveryTypeChange(this)">
+                            <option value="0">Самовывоз</option>
+                            <option value="1">Курьер</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row mb30" id="address-area" style="display: none">
+                    <label class="input-labels control-label col-sm-2" for="delivery">Адрес доставки</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" id="address" name="address" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" name="order_list" id="order_list">
+                <input type="hidden" name="order_amount" id="order_amount">
+
+            </fieldset>
+    </div>
+
+    <div class="amount-container">
+        <h5 class="card-titles" id="amount"></h5>
+    </div>
+
+    <div class="card-list" id="cardList">
+        <div class="cards-headers">
+            <div class="container card-container">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-titles" id="products-title">ТОВАРОВ НЕТ</h5>
+                    </div>
+                    <div class="col-3 quantity-column">Количество</div>
+                    <div class="col-3 price-column">Цена</div>
+                </div>
+                <hr class="hr-line">
+            </div>
+        </div>
+
+        <div id="cards-body">
+        </div>
+
+        <button type="submit" class="btn btn-info" id="submitBtn" disabled>Отправить заказ</button>
+    </div>
+
+</div>
+</form>
+{% include "flower_market/order_call_dialog.html" %}
+</body>
+</html>

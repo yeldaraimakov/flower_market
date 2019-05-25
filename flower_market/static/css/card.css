@@ -1,0 +1,88 @@
+.ordering {
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+}
+
+.amount-container {
+    margin-left: 250px;
+    margin-right: 250px;
+    padding: 30px;
+    margin-bottom: 50px;
+    background-color: #fffcdf;
+}
+
+.card-titles {
+    font-weight: bold;
+}
+
+.hr-line {
+    height: 2px;
+    font-weight: bold;
+    border: none;
+    background-color: black;
+}
+
+.warning-icon {
+    color: red;
+}
+
+.warning-text {
+    font-size: 12px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.width350 {
+    width: 350px;
+}
+
+.card-list {
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 50px;
+}
+
+.price-column {
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.productName {
+    display: inline;
+    margin-top: -100px !important;
+}
+
+.quantity-column {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.productQuantity {
+    color: black;
+}
+
+.productPrice {
+    color: black;
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+.card-container {
+    padding-left: unset !important;
+    padding-right: unset !important;
+}
+
+.input-labels {
+    font-weight: 700;
+    font-size: 12px;
+}

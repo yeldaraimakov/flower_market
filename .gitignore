@@ -1,0 +1,7 @@
+.idea/*
+*.pyc
+*.mo
+*.log
+media/*
+mysql.conf
+staticfiles/

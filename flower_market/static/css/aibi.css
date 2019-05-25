@@ -1,0 +1,164 @@
+.top-menu{
+	color: black;
+	font-size: 17px;
+	width: 100%;
+    vertical-align: baseline;
+}
+ul{
+	list-style: none;
+	margin: 0;
+}
+.top-menu li{
+	display: inline;
+	padding: 40px;
+}
+#logotype{
+	 width: 76px;
+    height: 76px;
+}
+.button_1 {
+	width: 180px;
+	background-color: #EFEF0E;
+	color: #000;
+	font-size: 17px;
+	border: none;
+	display: inline;
+
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.topmenu {
+  backface-visibility: hidden;
+  padding-left: 0;
+  margin: 0; 
+  background:  linear-gradient(to right, #E6E6FA, #EE82EE); 
+  width: 100%;
+  display: block;
+}
+
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+  
+}
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: #003559;
+  text-transform: uppercase;
+}
+.down:after {
+  content: "\f107";
+  margin-left: 8px;
+  font-family: FontAwesome;
+}
+.topmenu li a:hover { color: #E6855F; }
+.submenu {
+  background: white;
+  border: 2px solid #003559;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  width: 150px;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: #7f7f7f;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Kurale', serif;
+}
+.fone {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+	height: 300px;
+	background-color: #000;
+	opacity: 0.3;
+}
+.container2{
+	width: 100%;
+	height: 300px;
+	background: url("http://orchideainfo.com/wp-content/uploads/2016/04/kak-postupit-kogda-orxideya-sbrosila-cvety-690x400.jpg");
+	background-size: 100% auto;
+
+
+}
+.hero-image{
+width: 100%;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+    }
+.text_row2 {
+	font-size: 40px;
+	color: #fff;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 280px;
+	line-height: 1.2;
+}
+.picture{
+	margin: 15px 5px;
+}
+
+.input-name {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+#messages {
+    margin: 10px;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.success-msg {
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.btn-borderless {
+    border: none;
+    background: white;
+    color: #17a2b8;
+}
+
+#modalCardList {
+    width: 1000px !important;
+    margin: auto;
+}
+
+.card-icon {
+    float: right;
+    margin: 20px;
+    color: #17a2b8;
+}
