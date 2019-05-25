@@ -84,8 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'flower_market',
-        'USER': 'flower_market',
-        'PASSWORD': 'flower_market',
+        'USER': 'aibiflower',
+        'PASSWORD': 'aibiflower',
         'HOST': 'localhost',
         'PORT': '3306',
     }
