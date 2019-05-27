@@ -1,12 +1,4 @@
-.ordering {
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 50px;
-}
-
 .amount-container {
-    margin-left: 250px;
-    margin-right: 250px;
     padding: 30px;
     margin-bottom: 50px;
     background-color: #fffcdf;
@@ -45,8 +37,6 @@
 }
 
 .card-list {
-    margin-left: 250px;
-    margin-right: 250px;
     margin-bottom: 50px;
 }
 

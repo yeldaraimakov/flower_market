@@ -1,54 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Цветы Алматы. Доставка цветов </title>
-</head>
-<body>
-{% load static %}
+{% extends 'flower_market/base.html' %}
 
-
-<link rel="stylesheet" type="text/css" href="{% static "/" %}css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="{% static "/" %}css/aibi.css">
-<link rel="stylesheet" type="text/css" href="{% static "/" %}css/card.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="{% static "/" %}js/jquery.min.js" type="text/javascript"></script>
-<script src="{% static "/" %}js/popper.min.js" type="text/javascript"></script>
-<script src="{% static "/" %}js/vendor.js" type="text/javascript"></script>
-<script src="{% static "/" %}js/order.js" type="text/javascript"></script>
-<script src="{% static "/" %}js/clean.js" type="text/javascript"></script>
-
-<div class="container-fluid boss">
-    <div class="container1 ">
-        <div class="row">
-            <div class="col-12">
-                <div class="top-menu">
-
-                    <ul>
-                        <li class="top-menu"><img
-                                srcset="https://scontent-bru2-1.cdninstagram.com/vp/0da53b16b02ef3d059f52aa0e7deb5b1/5CFE40FF/t51.2885-19/s150x150/49933867_1422561357878433_1211070285143343104_n.jpg?_nc_ht=scontent-bru2-1.cdninstagram.com"
-                                id="logotype"></li>
-                        <li class="top-menu"><a href="{% url 'home' %}">Главная </a></li>
-                        <li class="top-menu"><a href="dostavka.html"> Доставка </a></li>
-                        <li class="top-menu"><a href="oplata.html"> Как оплатить </a></li>
-                        <li class="top-menu"> +7 7782216866</li>
-                        <li class="top-menu">
-                            <button class="button_1" data-toggle="modal" data-target="#modalOrderCall">ЗАКАЗАТЬ ЗВОНОК
-                            </button>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <p class="success-msg">
-        Ваш заказ успешно отправлен
-    </p>
-</div>
-
-{% include "flower_market/order_call_dialog.html" %}
-</body>
-</html>
+{% block content %}
+    Ваш заказ успешно отправлен
+{% endblock %}
