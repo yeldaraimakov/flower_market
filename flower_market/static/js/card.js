@@ -14,7 +14,7 @@ $(document).ready(function () {
         var sum_price = parseInt(cardList[key]['price']) * parseInt(cardList[key]['quantity']);
         var productHtml = '<div class="row"><div class="col-6">' +
             '<image class="picture" width="100" height="100" data-was-processed="true" ' +
-            'src="' + cardList[key]['image'] + '">' +
+            'src="/static/images/' + cardList[key]['image'] + '">' +
             '<div class="productName">' + cardList[key]['name'] + '</div></div>' +
             '<div class="col-3 productQuantity quantity-column">' + cardList[key]['quantity'] + '</div>' +
             '<div class="col-3 productPrice price-column">' + sum_price + ' тг.</div>' + '</div><hr>';

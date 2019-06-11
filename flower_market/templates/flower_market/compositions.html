@@ -1,0 +1,143 @@
+{% extends 'flower_market/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+        <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <center><h1 class="text_cont3"> Летние букеты</h1></center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/копозиция1.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>15000 KZT </p></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                    id="flower_2" data-toggle="modal" data-target="#modalCardList">Купить
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    id="about_2" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция2.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>6000 KZT </p></div>
+                    <div class="btn-group">
+                        <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                id="flower_23" data-toggle="modal" data-target="#modalCardList">Купить
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                id="about_23" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция3.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>6000 KZT </p></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                    id="flower_5" data-toggle="modal" data-target="#modalCardList">Купить
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    id="about_5" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция12.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>8000 KZT </p></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                    id="flower_24" data-toggle="modal" data-target="#modalCardList">Купить
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    id="about_24" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция5.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>8000 KZT </p></div>
+                    <div class="btn-group">
+                        <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                id="flower_25" data-toggle="modal" data-target="#modalCardList">Купить
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                id="about_25" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция8.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>9000 KZT </p></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                    id="flower_19" data-toggle="modal" data-target="#modalCardList">Купить
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    id="about_19" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция9.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>15000 KZT </p></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                    id="flower_26" data-toggle="modal" data-target="#modalCardList">Купить
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    id="about_26" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция11.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>10000 KZT </p></div>
+                    <div class="btn-group">
+                        <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                id="flower_7" data-toggle="modal" data-target="#modalCardList">Купить
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                id="about_7" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="picture" width="300" height="300" src="{% static "/" %}images/композиция14.jpg"
+                         data-was-processed="true">
+                    <div class="text_row3"><p>9000 KZT </p></div>
+                    <div class="btn-group">
+                        <button type="button" class="buy-button btn btn-sm btn-outline-secondary"
+                                id="flower_8" data-toggle="modal" data-target="#modalCardList">Купить
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                id="about_8" data-toggle="modal" data-target="#modalAboutFlower" onclick="updateInfo(this)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

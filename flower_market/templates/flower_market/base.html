@@ -27,8 +27,9 @@
                         srcset="https://scontent-bru2-1.cdninstagram.com/vp/0da53b16b02ef3d059f52aa0e7deb5b1/5CFE40FF/t51.2885-19/s150x150/49933867_1422561357878433_1211070285143343104_n.jpg?_nc_ht=scontent-bru2-1.cdninstagram.com"
                         id="logotype"></li>
                 <li class="top-menu"><a href="{% url 'home' %}">Главная </a></li>
+                <li class="top-menu"><a href="{% url 'about' %}">О магазине </a></li>
                 <li class="top-menu"><a href="{% url 'delivery' %}"> Доставка </a></li>
-                <li class="top-menu"><a href="oplata.html"> Как оплатить </a></li>
+                <li class="top-menu"><a href="{% url 'how_to_pay' %}"> Как оплатить </a></li>
                 <li class="top-menu"> +7 7782216866</li>
                 <li class="top-menu">
                     <button class="button_1" data-toggle="modal" data-target="#modalOrderCall">ЗАКАЗАТЬ ЗВОНОК</button>
@@ -42,31 +43,22 @@
     </div>
     <nav>
         <ul class="topmenu">
-            <li><a href="">Весна</a></li>
-            <li><a href="">День рождения</a></li>
+            <li><a href="{% url 'summer' %}">Лето</a></li>
+            <li><a href="{% url 'birthday' %}">День рождения</a></li>
             <li><a href="" class="down">Букеты</a>
                 <ul class="submenu">
-                    <li><a href="tulpane.html">С тюльпанами</a></li>
-                    <li><a href="rose.html">С розами</a></li>
-                    <li><a href="iris.html">С ирисами</a></li>
-                    <li><a href="liliya.html">С лилиями</a></li>
-                    <li><a href="">С хризантемами</a></li>
-                    <li><a href="">С герберами</a></li>
-                    <li><a href="">С альстромериями</a></li>
+                    <li><a href="{% url 'tulips' %}">С тюльпанами</a></li>
+                    <li><a href="{% url 'roses' %}">С розами</a></li>
+                    <li><a href="{% url 'iris' %}">С ирисами</a></li>
+                    <li><a href="{% url 'lily' %}">С лилиями</a></li>
+                    <li><a href="{% url 'chrysanthemum' %}">С хризантемами</a></li>
+                    <li><a href="{% url 'gerber' %}">С герберами</a></li>
+                    <li><a href="{% url 'alstroemeria' %}">С альстромериями</a></li>
                 </ul>
             </li>
-            <li><a href="" class="down">Розы</a>
-                <ul class="submenu">
-                    <li><a href="">Category</a></li>
-                    <li><a href="">Author</a></li>
-                    <li><a href="">Archive</a></li>
-                    <li><a href="">Tags</a></li>
-                </ul>
-            </li>
-            <li><a href="">Цветы</a></li>
-            <li><a href="">Композиции</a></li>
-            <li><a href="">Повод</a></li>
-
+            <li><a href="{% url 'rose' %}">Розы</a></li>
+            <li><a href="{% url 'flowers' %}">Цветы</a></li>
+            <li><a href="{% url 'compositions' %}">Композиции</a></li>
         </ul>
     </nav>
 
@@ -88,6 +80,7 @@
 
 {% include "flower_market/order_call_dialog.html" %}
 {% include "flower_market/card_list_dialog.html" %}
+{% include "flower_market/about_flower.html" %}
 
 <div class="main-content">
     {% block content %}
@@ -98,6 +91,7 @@
 <script src="{% static "/" %}js/popper.min.js" type="text/javascript"></script>
 <script src="{% static "/" %}js/vendor.js" type="text/javascript"></script>
 <script src="{% static "/" %}js/order.js" type="text/javascript"></script>
+<script src="{% static "/" %}js/about.js" type="text/javascript"></script>
 
 {% block scripts %}
 {% endblock %}

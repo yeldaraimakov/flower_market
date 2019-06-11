@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
-    $('.buy-button').click(function () {
-        var id = $(this).attr('id');
-        var name = $(this).attr('name');
-        var price = $(this).attr('price');
-        var image = $(this).attr('image');
+    $('.buy-button').click(function (event) {
+        var id = event.target.id;
+        var idx = id.split('_')[1];
+        var name = titles[idx];
+        var price = prices[idx];
+        var image = images[idx];
 
         var cardLen = 0;
         var cardList = {};
@@ -19,7 +20,7 @@ $(document).ready(function() {
         for (var key in cardList) {
             if (key !== id) {
                 var sum_price = parseInt(cardList[key]['price']) * parseInt(cardList[key]['quantity']);
-                var productHtml = '<div class="row">' + '<div class="col-8"><p class="float-left"><image src="' + cardList[key]['image'] +
+                var productHtml = '<div class="row">' + '<div class="col-8"><p class="float-left"><image src="/static/images/' + cardList[key]['image'] +
                     '" class="picture" width="100" height="100" data-was-processed="true"></p> ' +
                     '<br><div class="productName">' + cardList[key]['name'] + '</div></div>' +
                     '<div class="productQuantity col-1">' + cardList[key]['quantity'] + '</div>' +
@@ -41,7 +42,7 @@ $(document).ready(function() {
         $('#lastProductName').text(name);
         $('#lastProductPrice').text(parseInt(price) * parseInt(quantity));
         $('#lastProductQuantity').text(quantity);
-        $('#lastProductImage').attr('src', image);
+        $('#lastProductImage').attr('src', '/static/images/' + image);
 
         cardList[id] = {'name': name, 'price': price, 'image': image, 'quantity': quantity};
         localStorage.setItem('cardList', JSON.stringify(cardList));
@@ -51,5 +52,6 @@ $(document).ready(function() {
     $('#cancel').click(function () {
         $('#modalCardList').modal('hide');
     });
+
 });
 
