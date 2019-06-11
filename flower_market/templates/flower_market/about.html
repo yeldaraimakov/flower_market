@@ -2,37 +2,57 @@
 
 {% load static %}
 
+{% block resources %}
+    <link rel="stylesheet" type="text/css" href="{% static "/" %}css/about.css">
+{% endblock %}
+
 {% block content %}
-    <div class="col-9">
-        <br/>
-        <h1>Цветочный магазин &laquo;Ai-Bi&raquo;</h1>
-        <p>Цветочный магазин &laquo;Ai-Bi&raquo; существует уже более 10 лет. <span
-                style="font-weight: 400;">В нашем </span><span
-                style="font-weight: 400;">цветочном онлайн магазине</span><span style="font-weight: 400;"> представлен широкий выбор авторских букетов, композиций из цветов и подарков высокого качества, которые можно заказать </span><span
-                style="font-weight: 400;">круглосуточно</span><span style="font-weight: 400;"> с доставкой </span><span
-                style="font-weight: 400;">в Алмате</span><span style="font-weight: 400;">.</span><span
-                style="font-weight: 400;">&nbsp;Все букеты созданы нашими профессиональными флористами в соответствии с актуальными трендами флористики. На сайте представлены композиции из различных видов растений. </span>
-        </p>
-        <p>в Алмате мы предоставляем следующие услуги:</p>
-        <ul style="text-align: left;">
-            <li style="color: #000;">продажа цветов, букетов, подарков через интернет;</li>
-            <li style="color: #000;">оперативная доставка заказа от 3 ч. получателю;</li>
-            <li style="color: #000;">оформление мероприятий;</li>
-            <li style="color: #000;">выполнение индивидуальных заказов любой сложности.</li>
-        </ul>
-        <p>Также мы ждем вас в нашем цветочном магазине по адресу: г. Алматы, Достык 107<br/>Режим работы: Круглосуточно<br/>Наши
-            менеджеры всегда окажут необходимую помощь по Телефону: +7-778-221-6866</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.2847689399896!2d76.95963655074299!3d43.22448878796259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f087b413eb7%3A0xbf123a6d22876ac!2z0L_RgNC-0YHQv9C10LrRgiDQlNC-0YHRgtGL0LogMTA3LCDQkNC70LzQsNGC0YsgMDUwMDUx!5e0!3m2!1sru!2skz!4v1558490465840!5m2!1sru!2skz"
-                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <p>
-        <div id="kontakti">
-            <h3> НАШИ КОНТАКТЫ</h3>
-            <ul>
-                <li>+7-778-221-6866</li>
-                <li>г. Алматы, Достык 107</li>
-                <li>Режим работы: Круглосуточно</li>
-                <li><a href="https://www.instagram.com/aibi_flowers/?hl=ru">Мы в instagram </a></li>
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="category-wrap">
+                    <ul>
+                        <li><a href="{% url 'about' %}">О магазине</a></li>
+                        <li><a href="{% url 'delivery' %}">Доставка</a></li>
+                        <li><a href="{% url 'how_to_pay' %}">Оплата</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-9">
+                <br/>
+                <h1>Цветочный магазин &laquo;Ai-Bi&raquo;</h1>
+                <p>Цветочный магазин &laquo;Ai-Bi&raquo; существует уже более 10 лет. <span
+                        style="font-weight: 400;">В нашем </span><span
+                        style="font-weight: 400;">цветочном онлайн магазине</span><span style="font-weight: 400;"> представлен широкий выбор авторских букетов, композиций из цветов и подарков высокого качества, которые можно заказать </span><span
+                        style="font-weight: 400;">круглосуточно</span><span
+                        style="font-weight: 400;"> с доставкой </span><span
+                        style="font-weight: 400;">в Алмате</span><span style="font-weight: 400;">.</span><span
+                        style="font-weight: 400;">&nbsp;Все букеты созданы нашими профессиональными флористами в соответствии с актуальными трендами флористики. На сайте представлены композиции из различных видов растений. </span>
+                </p>
+                <p>в Алмате мы предоставляем следующие услуги:</p>
+                <ul style="text-align: left;">
+                    <li style="color: #000;">продажа цветов, букетов, подарков через интернет;</li>
+                    <li style="color: #000;">оперативная доставка заказа от 3 ч. получателю;</li>
+                    <li style="color: #000;">оформление мероприятий;</li>
+                    <li style="color: #000;">выполнение индивидуальных заказов любой сложности.</li>
+                </ul>
+                <p>Также мы ждем вас в нашем цветочном магазине по адресу: г. Алматы, Достык 107<br/>Режим работы:
+                    Круглосуточно<br/>Наши
+                    менеджеры всегда окажут необходимую помощь по Телефону: +7-778-221-6866</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.2847689399896!2d76.95963655074299!3d43.22448878796259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f087b413eb7%3A0xbf123a6d22876ac!2z0L_RgNC-0YHQv9C10LrRgiDQlNC-0YHRgtGL0LogMTA3LCDQkNC70LzQsNGC0YsgMDUwMDUx!5e0!3m2!1sru!2skz!4v1558490465840!5m2!1sru!2skz"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <p>
+                <div id="kontakti">
+                    <h3> НАШИ КОНТАКТЫ</h3>
+                    <ul>
+                        <li>+7-778-221-6866</li>
+                        <li>г. Алматы, Достык 107</li>
+                        <li>Режим работы: Круглосуточно</li>
+                        <li><a href="https://www.instagram.com/aibi_flowers/?hl=ru">Мы в instagram </a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

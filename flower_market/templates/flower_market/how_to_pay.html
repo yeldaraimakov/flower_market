@@ -2,10 +2,22 @@
 
 {% load static %}
 
+{% block resources %}
+    <link rel="stylesheet" type="text/css" href="{% static "/" %}css/about.css">
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col-3">
+                <div class="category-wrap">
+                    <ul>
+                        <li><a href="{% url 'about' %}">О магазине</a></li>
+                        <li><a href="{% url 'delivery' %}">Доставка</a></li>
+                        <li><a href="{% url 'how_to_pay' %}">Оплата</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-9">
                 <div class="oplata">
